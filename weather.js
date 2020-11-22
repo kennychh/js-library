@@ -1,6 +1,6 @@
 "use strict";
-function randRange(min, max) {
-  return (Math.floor(Math.random()*(min-max+1))+min);
+function randRange(minN, maxN) {
+  return (Math.floor(Math.random()*(minN-maxN+1))+minN);
 }
 
 function Rain () {
