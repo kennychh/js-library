@@ -1,13 +1,88 @@
-.drop {
-  background: 'black';
-  width: 1px;
-  height: 89px;
-  color: 'black';
-  bottom: 200px;
-  position: absolute;
-  -webkit-animation:fall .60s linear infinite;
+html {
+  height: 100%
+}
+body {
+  overflow: hidden;
+  background-color: #000
+}
+#box {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  float: left;
 }
 
-@-webkit-keyframes fall {
-  to {margin-top: 900px;}
+#sunbox {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  float: left;
+  background-color: #3399ff
+}
+
+.moon {
+  position: absolute;
+  top: 1000px;
+  left: calc(50% - 45px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 20px solid;
+  border-color: rgb(83, 83, 198, 0.6);
+  background-color: #ffffff;
+}
+
+.sun {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 20px solid;
+  border-color: #80bfff;
+  background-color: #ffffb3;
+}
+
+.drop {
+  background: #fff;
+  width: 1px;
+  height: 30px;
+  color: #000080;
+  position: absolute;
+}
+@-webkit-keyframes sunset {
+  from {top: calc(50% - 60px);}
+  to {top: 1000px;}
+}
+@-webkit-keyframes sunrise {
+  from {top: 1000px;}
+  to {top: calc(50% - 60px);}
+}
+
+@-webkit-keyframes moonset {
+  from {top: calc(50% - 45px);}
+  to {top: 1000px;}
+}
+@-webkit-keyframes moonrise {
+  from {top: 1000px;}
+  to {top: calc(50% - 45px);}
+}
+
+@-webkit-keyframes bluesky {
+  from {background-color: #131339;}
+  to {background-color: #3399ff;}
+}
+@-webkit-keyframes nightsky {
+  0% {
+    background-color: #3399ff;
+  }
+  100% {
+    background-color: #131339;
+  }
+}
+@-webkit-keyframes rain {
+  to {top: 100%; }
 }
