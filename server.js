@@ -14,11 +14,11 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '/pub')))
 
 // Let's make some express 'routes'
-// Express has something called a Router, which 
+// Express has something called a Router, which
 // takes specific HTTP requests and handles them
 // based on the HTTP method and URL
 
-// Let's make a route for an HTTP GET request to the 
+// Let's make a route for an HTTP GET request to the
 // 'root' of our app (i.e. top level domain '/')
 
 app.get('/', (req, res) => {
@@ -26,7 +26,14 @@ app.get('/', (req, res) => {
 	//res.send('This should be the root route!')
 
 	//sending some HTML
-	res.send('<h1>Hello there!</h1>')
+	const r = new Rain()
+	const s = new Sun()
+	const sn = new Snow()
+	s.makeSunMoon()
+	s.makeNightDay()
+	sn.snow()
+	r.makeItRain()
+	res.send(s)
 })
 
 // Error codes
@@ -57,4 +64,3 @@ app.listen(port, () => {
 })  // localhost development port 5000  (http://localhost:5000)
    // We've bound that port to localhost to go to our express server.
    // Must restart web server when you make changes to route handlers.
-
