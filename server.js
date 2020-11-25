@@ -26,14 +26,8 @@ app.get('/', (req, res) => {
 	//res.send('This should be the root route!')
 
 	//sending some HTML
-	const r = new Rain()
-	const s = new Sun()
-	const sn = new Snow()
-	s.makeSunMoon()
-	s.makeNightDay()
-	sn.snow()
-	r.makeItRain()
-	res.send(s)
+
+	res.send('<h1>Hello there!</h1>')
 })
 
 // Error codes
