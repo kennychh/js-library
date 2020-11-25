@@ -27,8 +27,7 @@ app.get('/', (req, res) => {
 
 	//sending some HTML
 	const r = new Rain()
-	r.makeItRain()
-	res.send(r)
+	res.send('<h1>Hello there!</h1>')
 })
 
 // Error codes
