@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 	//res.send('This should be the root route!')
 
 	//sending some HTML
-	res.sendFile('/course.html');
+	res.sendFile('weather.html',{root:__dirname+'/pub'});
 
 })
 
