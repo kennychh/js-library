@@ -2,5 +2,8 @@
 
 const r = new Rain()
 const s = new Sun()
-s.makeSun()
+const sn = new Snow()
+s.makeSunMoon()
+s.makeNightDay()
+sn.snow()
 r.makeItRain()

@@ -1,11 +1,15 @@
+:root {
+  --snow_left;
+}
+
+
 html {
   height: 100%
 }
 body {
-  overflow: hidden;
   background-color: #000
 }
-#box {
+.box {
   overflow: hidden;
   width: 500px;
   height: 500px;
@@ -13,7 +17,7 @@ body {
   float: left;
 }
 
-#sunbox {
+.sunbox {
   overflow: hidden;
   width: 500px;
   height: 500px;
@@ -25,11 +29,11 @@ body {
 .moon {
   position: absolute;
   top: 1000px;
-  left: calc(50% - 45px);
-  width: 50px;
-  height: 50px;
+  left: calc(50% - 60px);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 20px solid;
+  border: 30px solid;
   border-color: rgb(83, 83, 198, 0.6);
   background-color: #ffffff;
 }
@@ -53,6 +57,31 @@ body {
   color: #000080;
   position: absolute;
 }
+
+.snow {
+  background: #fff;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+
+@-webkit-keyframes rotateSun{
+  0% {transform: rotate(60deg)}
+  100% { transform: rotate(420deg); }
+}
+
+@-webkit-keyframes rotateMoon{
+  0% { transform: rotate(240deg)}
+    100% { transform: rotate(600deg); }
+  }
+
+@-webkit-keyframes snow {
+  to {top: 100%; }
+}
+
 @-webkit-keyframes sunset {
   from {top: calc(50% - 60px);}
   to {top: 1000px;}
@@ -73,7 +102,7 @@ body {
 
 @-webkit-keyframes bluesky {
   from {background-color: #131339;}
-  to {background-color: #3399ff;}
+  to {background: #3399ff;}
 }
 @-webkit-keyframes nightsky {
   0% {
