@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
 	//res.send('This should be the root route!')
 
 	//sending some HTML
-	const r = new Rain()
 	res.send('<h1>Hello there!</h1>')
 })
 
