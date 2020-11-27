@@ -163,10 +163,6 @@ Snow.prototype = {
       //     document.documentElement.style.setProperty('--snow_left', '-10px');
       //   }
       // });
-      const title = document.createElement('header')
-      const text = document.createTextNode('Snow')
-      title.appendChild(text)
-      box.append(title)
       box.append(snowflake)
       this.snowflakes.push(snowflake)
     }
@@ -175,4 +171,8 @@ Snow.prototype = {
     const body = $('body')
     body.append(box)
   }
+  const title = document.createElement('header')
+  const text = document.createTextNode('Snow')
+  title.appendChild(text)
+  box.append(title)
 }
