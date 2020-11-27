@@ -50,6 +50,11 @@ Sun.prototype = {
     this.suns.push(moon)
     const body = $('body')
     body.append(box)
+    const title = document.createElement('header')
+    title.className = 'header'
+    const text = document.createTextNode('Rising Sun and Moon (Click me!)')
+    title.appendChild(text)
+    body.append(title)
   },
   makeNightDay: function(){
     const sun = document.createElement('div')
@@ -87,10 +92,16 @@ Sun.prototype = {
     this.suns.push(moon)
     const body = $('body')
     body.append(box)
+    const title = document.createElement('header')
+    title.className = 'header'
+    const text = document.createTextNode('Day and Night')
+    title.appendChild(text)
+    body.append(title)
   }
 }
 
 function Rain () {
+  this.raindrops = []
 }
 Rain.prototype = {
 
@@ -116,10 +127,15 @@ Rain.prototype = {
         raindrop.style.opacity= 0.6
       }
       box.append(raindrop)
-
+      this.raindrops.push(raindrop)
     }
     const body = $('body')
     body.append(box)
+    const title = document.createElement('header')
+    title.className = 'header'
+    const text = document.createTextNode('Rain')
+    title.appendChild(text)
+    body.append(title)
   }
 }
 
@@ -166,13 +182,13 @@ Snow.prototype = {
       box.append(snowflake)
       this.snowflakes.push(snowflake)
     }
-
-
     const body = $('body')
+    const title = document.createElement('header')
+    title.className = 'header'
+    const text = document.createTextNode('Snow')
+    title.appendChild(text)
     body.append(box)
+    body.append(title)
   }
-  const title = document.createElement('header')
-  const text = document.createTextNode('Snow')
-  title.appendChild(text)
-  box.append(title)
+
 }
