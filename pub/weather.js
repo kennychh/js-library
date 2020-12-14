@@ -141,6 +141,7 @@ Rain.prototype = {
 
 function Snow () {
  this.snowflakes = []
+ this.duration =[]
 }
 
 Snow.prototype = {
@@ -165,22 +166,10 @@ Snow.prototype = {
       else if (op == 2){
         snowflake.style.opacity= 0.6
       }
-      // $(box).mouseleave(function(){
-      //   var relX = event.pageX - $(this).offset().left;
-      //   document.documentElement.style.setProperty('--snow_left', dropLeft+'px');
-      // });
-      // $(box).mouseenter(function(event){
-      //   var relX = event.pageX - $(this).offset().left;
-      //   document.documentElement.style.setProperty('--snow_left', '10px');
-      //   if (relX <= 250 ){
-      //     document.documentElement.style.setProperty('--snow_left', '10px');
-      //   }
-      //   else{
-      //     document.documentElement.style.setProperty('--snow_left', '-10px');
-      //   }
-      // });
+
       box.append(snowflake)
       this.snowflakes.push(snowflake)
+      this.duration.push(duration)
     }
     const body = $('body')
     const title = document.createElement('header')
@@ -189,6 +178,11 @@ Snow.prototype = {
     title.appendChild(text)
     body.append(box)
     body.append(title)
+  }
+  speed: function(speed){
+    for (int i = 0; i < this.snowflakes.length){
+      this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*speed}s infinite`
+    }
   }
 
 }
