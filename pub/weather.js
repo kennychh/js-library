@@ -145,11 +145,11 @@ function Snow () {
 }
 
 Snow.prototype = {
-  snow: function () {
+  snow: function (intensity = 200) {
     const box = document.createElement('div')
     box.className = "box"
     box.style.backgroundColor = '#131339'
-    for (let i = 1; i < 200; i++){
+    for (let i = 1; i < intensity; i++){
       const dropLeft = randRange(0, 500)
       const dropTop =  randRange(-200, -50)
       const op = randRange(1, 3)
