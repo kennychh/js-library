@@ -178,7 +178,7 @@ Snow.prototype = {
     title.appendChild(text)
     body.append(box)
     body.append(title)
-  }
+  },
   speed: function(speed){
     for (int i = 0; i < this.snowflakes.length){
       this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*speed}s infinite`
