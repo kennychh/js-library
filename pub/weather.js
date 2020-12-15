@@ -6,9 +6,10 @@ function randRange(min, max) {
 function clouds (){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
+
+  cloud.className = 'clouds'
   cloud.style.width = width
   cloud.style.height = width
-  cloud.className = 'clouds'
   return cloud;
 }
 function Sun () {
