@@ -33,7 +33,7 @@ body {
 }
 .clouds {
   position: absolute;
-  top: 1000px;
+  top: 0px;
   left: calc(50% - 60px);
   width: 60px;
   height: 60px;
