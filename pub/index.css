@@ -9,7 +9,22 @@ html {
 body {
   background-color: #fff
 }
+@mixin clouds() {
+  transition: box-shadow 3s $easing;
+  $shadows-sunrise: ();
+  $moved-shadows-sunrise: ();
+  $shadows-sunset: ();
+  $moved-shadows-sunset: ();
+  $delta: 50px;
 
+  $clouds: 10;
+  @for $i from 1 through $clouds {
+    $x: (random(20px) - 10px) + ($app-width / $clouds) * $i;
+    $shadow: $x random(50) * 1px + 10px 0 $color-cloud-sunrise;
+    $shadows-sunrise: append($shadows-sunrise, $shadow, comma);
+    $shadow: set-nth($shadow, 4, $color-cloud-sunset);
+    $shadows-sunset: append($shadows-sunset, $shadow, comma);
+  }
 .header {
   text-align: center;
   font-size: 20px;
