@@ -60,7 +60,7 @@ Sun.prototype = {
     this.suns.push(moon)
     for(let i = 0; i <=10;i++){
       const cloud = clouds()
-      cloud.style.left = i*50+'px'
+      cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
 
     }
