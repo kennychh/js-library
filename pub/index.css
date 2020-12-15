@@ -50,7 +50,6 @@ body {
 }
 .clouds {
   overflow: hidden;
-  @include transition;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -58,20 +57,6 @@ body {
   height: 10rem;
   z-index: 1;
   color: #fff
-  @include clouds();
-
-  &:before, &:after {
-    @include transition;
-    transition-timing-function: ease-in-out;
-    width: 10rem;
-    height: 10rem;
-    top: 5rem;
-    left: -5rem;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    position: absolute;
-  }
 }
 .header {
   text-align: center;
