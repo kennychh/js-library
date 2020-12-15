@@ -54,12 +54,15 @@ Sun.prototype = {
       }
 
     })
-    const cloud = clouds()
     box.append(sun)
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-    box.append(cloud)
+    for(let i = 0; i <10;i++){
+      box.append(clouds())
+    }
+
+
     const body = $('body')
     body.append(box)
     const title = document.createElement('header')
