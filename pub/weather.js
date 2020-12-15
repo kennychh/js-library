@@ -8,6 +8,7 @@ function clouds (){
   const width = randRange(80,150)
 
   cloud.className = 'clouds'
+  console.log(width)
   cloud.style.width = width+'px'
   cloud.style.height = width+'px'
   return cloud;
