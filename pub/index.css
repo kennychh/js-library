@@ -32,9 +32,10 @@ body {
   background-color: #fff
 }
 .clouds {
+  position: absolute;
   top: 0px;
   float: left;
-  left: 0px;
+  left: -30px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
