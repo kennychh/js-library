@@ -3,6 +3,11 @@ function randRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function clouds (){
+  const cloud = document.createElement('div')
+  cloud.className = 'clouds'
+  return cloud;
+}
 function Sun () {
   this.suns = []
 }
@@ -44,6 +49,8 @@ Sun.prototype = {
       }
 
     })
+    const cloud = clouds()
+    box.append(cloud)
     box.append(sun)
     box.append(moon)
     this.suns.push(sun)
