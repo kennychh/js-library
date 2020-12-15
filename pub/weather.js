@@ -17,6 +17,8 @@ Sun.prototype = {
     var sunrise = true
     const sun = document.createElement('div')
     const moon = document.createElement('div')
+    const cloud = document.createElement('div')
+    cloud.className = 'clouds'
     moon.className = 'moon'
     sun.className = "sun"
     const box = document.createElement('div')
@@ -49,15 +51,14 @@ Sun.prototype = {
       }
 
     })
-    const cloud = clouds()
     box.append(sun)
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-
+    box.append(cloud)
     const body = $('body')
     body.append(box)
-    body.append(cloud)
+
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rising Sun and Moon (Click me!)')
