@@ -54,7 +54,7 @@ Sun.prototype = {
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-    body.append(cloud)
+    box.append(cloud)
     const body = $('body')
     body.append(box)
     const title = document.createElement('header')
