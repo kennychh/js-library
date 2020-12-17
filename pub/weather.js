@@ -164,6 +164,7 @@ function Snow () {
 
 Snow.prototype = {
   snow: function (intensity = 200) {
+    const that = this
     const box = document.createElement('div')
     box.className = "box"
     box.style.backgroundColor = '#131339'
@@ -192,7 +193,6 @@ Snow.prototype = {
     const button =document.createElement('button')
     button.id = 'button'
     $(document).on('click', '#button', function () {
-      const that = this
       that.speed(0.5)
     })
     box.append(button)
