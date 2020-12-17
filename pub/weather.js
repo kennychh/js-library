@@ -192,13 +192,13 @@ Snow.prototype = {
     }
     const button =document.createElement('button')
     button.id = 'snow_speed_button'
-    button.value = 'Faster'
+    button.textContent = 'Faster'
     const button2 =document.createElement('button')
     button2.id = 'snow_speed_button2'
-    button2.value = 'Normal'
+    button2.textContent = 'Normal'
     const button3 =document.createElement('button')
     button3.id = 'snow_speed_button3'
-    button3.value = 'Slower'
+    button3.textContent = 'Slower'
     $(document).on('click', '#snow_speed_button', function () {
       that.speed(0.5)
       console.log('b')
