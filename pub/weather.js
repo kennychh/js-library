@@ -189,6 +189,9 @@ Snow.prototype = {
       this.snowflakes.push(snowflake)
       this.duration.push(duration)
     }
+    const button =document.createElement('button')
+    button.id = 'button'
+    box.append(button)
     const body = $('body')
     const title = document.createElement('header')
     title.className = 'header'
@@ -198,15 +201,13 @@ Snow.prototype = {
     body.append(title)
   },
   speed: function(){
-    const button =document.createElement('button')
+    const button =document.findelementbyid('button')
 
     button.onclick = function (){
       for (let i = 0; i < this.snowflakes.length;i++){
         this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*0.5}s infinite`
       }
     }
-    const body = $('body')
-    body.append(button)
 
   }
 
