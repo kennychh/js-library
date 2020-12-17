@@ -198,12 +198,15 @@ Snow.prototype = {
     button.id = 'button3'
     $(document).on('click', '#button', function () {
       that.speed(0.5)
+      console.log('b')
     })
     $(document).on('click', '#button2', function () {
       that.speed(1)
+      console.log('b2')
     })
     $(document).on('click', '#button3', function () {
       that.speed(2)
+      console.log('b3')
     })
 
     box.append(button)
