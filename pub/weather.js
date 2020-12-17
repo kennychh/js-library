@@ -190,7 +190,10 @@ Snow.prototype = {
       this.duration.push(duration)
     }
     const button =document.createElement('button')
-    button.onclick = this.speed(0.5)
+    button.id = 'button'
+    $(document).on('click', '#button', function () {
+      this.speed(0.5)
+    })
     box.append(button)
     const body = $('body')
     const title = document.createElement('header')
