@@ -192,7 +192,8 @@ Snow.prototype = {
     const button =document.createElement('button')
     button.id = 'button'
     $(document).on('click', '#button', function () {
-      this.speed(0.5)
+      const that = this
+      that.speed(0.5)
     })
     box.append(button)
     const body = $('body')
