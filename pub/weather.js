@@ -205,6 +205,7 @@ Snow.prototype = {
         this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*0.5}s infinite`
       }
     }
+    const body = $('body')
     body.append(button)
 
   }
