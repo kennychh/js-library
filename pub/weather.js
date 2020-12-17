@@ -191,20 +191,23 @@ Snow.prototype = {
       this.duration.push(duration)
     }
     const button =document.createElement('button')
-    button.id = 'button'
+    button.id = 'snow_speed_button'
+    button1.value = 'Faster'
     const button2 =document.createElement('button')
-    button2.id = 'button2'
+    button2.id = 'snow_speed_button2'
+    button2.value = 'Normal'
     const button3 =document.createElement('button')
-    button3.id = 'button3'
-    $(document).on('click', '#button', function () {
+    button3.id = 'snow_speed_button3'
+    button3.value = 'Slower'
+    $(document).on('click', '#snow_speed_button', function () {
       that.speed(0.5)
       console.log('b')
     })
-    $(document).on('click', '#button2', function () {
+    $(document).on('click', '#snow_speed_button2', function () {
       that.speed(1)
       console.log('b2')
     })
-    $(document).on('click', '#button3', function () {
+    $(document).on('click', '#snow_speed_button3', function () {
       that.speed(2)
       console.log('b3')
     })
