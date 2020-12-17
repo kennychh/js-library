@@ -192,7 +192,7 @@ Snow.prototype = {
     }
     const button =document.createElement('button')
     button.id = 'snow_speed_button'
-    button1.value = 'Faster'
+    button.value = 'Faster'
     const button2 =document.createElement('button')
     button2.id = 'snow_speed_button2'
     button2.value = 'Normal'
