@@ -194,14 +194,21 @@ Snow.prototype = {
     button.id = 'button'
     const button2 =document.createElement('button')
     button.id = 'button2'
+    const button3 =document.createElement('button')
+    button.id = 'button3'
     $(document).on('click', '#button', function () {
       that.speed(0.5)
     })
     $(document).on('click', '#button2', function () {
+      that.speed(1)
+    })
+    $(document).on('click', '#button3', function () {
       that.speed(2)
     })
+
     box.append(button)
     box.append(button2)
+    box.append(button3)
     const body = $('body')
     const title = document.createElement('header')
     title.className = 'header'
