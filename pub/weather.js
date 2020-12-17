@@ -203,6 +203,7 @@ Snow.prototype = {
   speed: function(speed){
     for (let i = 0; i < this.snowflakes.length;i++){
       this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*speed}s infinite`
+      console.log(this.duration[i]*speed)
     }
 
   }
