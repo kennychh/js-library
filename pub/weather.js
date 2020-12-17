@@ -199,13 +199,13 @@ Snow.prototype = {
   },
   speed: function(){
     let speed = 1
-    const button1 = document.form1["button1"]
+    const button1 = document.body["button1"]
     button1.onclick = function (){
       for (let i = 0; i < this.snowflakes.length;i++){
         this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*0.5}s infinite`
       }
     }
-    const button2 = document.form1["button2"]
+    const button2 = document.body["button2"]
     button2.onclick = function (){
       for (let i = 0; i < this.snowflakes.length;i++){
         this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*1}s infinite`
