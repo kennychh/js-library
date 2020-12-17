@@ -201,7 +201,7 @@ Snow.prototype = {
     body.append(title)
   },
   speed: function(){
-    const button =document.getelementbyid('button')
+    const button =document.getElementById('button')
 
     button.onclick = function (){
       for (let i = 0; i < this.snowflakes.length;i++){
