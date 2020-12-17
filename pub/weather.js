@@ -193,9 +193,9 @@ Snow.prototype = {
     const button =document.createElement('button')
     button.id = 'button'
     const button2 =document.createElement('button')
-    button.id = 'button2'
+    button2.id = 'button2'
     const button3 =document.createElement('button')
-    button.id = 'button3'
+    button3.id = 'button3'
     $(document).on('click', '#button', function () {
       that.speed(0.5)
       console.log('b')
