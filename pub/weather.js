@@ -190,7 +190,11 @@ Snow.prototype = {
       this.duration.push(duration)
     }
     const button =document.createElement('button')
-    button.id = 'button'
+    button.onclick = function (){
+      for (let i = 0; i < this.snowflakes.length;i++){
+        this.snowflakes[i].style.animation = `snow linear ${this.duration[i]*0.5}s infinite`
+      }
+    }
     box.append(button)
     const body = $('body')
     const title = document.createElement('header')
