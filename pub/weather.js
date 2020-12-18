@@ -76,6 +76,7 @@ Sun.prototype = {
     })
     const button =document.createElement('button')
     button.id = 'cloud2_button'
+    button.className = 'button_position'
     button.textContent = 'Clouds'
     $(document).on('click', '#cloud2_button', function () {
       if (haveClouds){
@@ -150,6 +151,7 @@ Sun.prototype = {
     this.suns.push(moon)
     const button =document.createElement('button')
     button.id = 'cloud_button'
+    button.className = 'button_position'
     button.textContent = 'Clouds'
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
@@ -210,12 +212,15 @@ Rain.prototype = {
     }
     const button =document.createElement('button')
     button.id = 'rain_button'
+    button.className = 'button_position'
     button.textContent = 'Light'
     const button2 =document.createElement('button')
     button2.id = 'rain_button2'
+    button2.className = 'button_position'
     button2.textContent = 'Normal'
     const button3 =document.createElement('button')
     button3.id = 'rain_button3'
+    button3.className = 'button_position'
     button3.textContent = 'Heavy'
     $(document).on('click', '#rain_button', function () {
       that.intensity(0)
@@ -315,12 +320,15 @@ Snow.prototype = {
     }
     const button =document.createElement('button')
     button.id = 'snow_speed_button'
+    button.className = 'button_position'
     button.textContent = 'Faster'
     const button2 =document.createElement('button')
     button2.id = 'snow_speed_button2'
+    button.className = 'button_position'
     button2.textContent = 'Normal'
     const button3 =document.createElement('button')
     button3.id = 'snow_speed_button3'
+    button3.className = 'button_position'
     button3.textContent = 'Slower'
     $(document).on('click', '#snow_speed_button', function () {
       that.speed(0.5)
