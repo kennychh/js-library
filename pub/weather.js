@@ -65,7 +65,7 @@ Sun.prototype = {
         moon.style.animationFillMode = 'forwards'
         sunrise = true
         for(let i = 0; i <=cloudList.length;i++){
-          cloudList[i].style.animationName ='cloudySky'
+          cloudList[i].style.animationName ='cloudyDay'
           cloudList[i].style.animationDuration = '3s'
           cloudList[i].style.animationFillMode = 'forwards'
         }
