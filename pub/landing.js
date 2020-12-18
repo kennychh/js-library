@@ -1,8 +1,10 @@
 const r = new Rain()
 const s = new Sun()
 const sn = new Snow()
+s.makeSunMoon(false, false)
 
-const sbox = s.makeSunMoon(false, false)
-const smbox = s.makeNightDay(false,false)
-const snbox = sn.snow(100, false)
-const rbox = r.makeItRain(false)
+s.makeNightDay(false,false)
+
+sn.snow(100, false)
+
+r.makeItRain(false)
