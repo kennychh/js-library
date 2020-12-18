@@ -3,6 +3,10 @@ function randRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getFunctionName() {
+   return getFunctionName.caller.name
+}
+
 function clouds (i){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
@@ -31,7 +35,7 @@ Sun.prototype = {
     box.className = "sunbox"
     box.id = "sunbox"
     for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+'makeSunMoon')
+      const cloud = clouds(i+getFunctionName())
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
@@ -76,16 +80,17 @@ Sun.prototype = {
     })
     const button =document.createElement('button')
     button.id = 'cloud_button'
+    button.textContent = 'Clouds'
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeSunMoon").hide();
+          $('#cloud'+i+getFunctionName()).hide();
         }
         haveClouds = false
       }
       else{
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeSunMoon").show();
+          $('#cloud'+i+getFunctionName()).show();
         }
         haveClouds = true
       }
@@ -113,7 +118,7 @@ Sun.prototype = {
     sun.className = "sun"
     const box = document.createElement('div')
     for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+'makeNightDay')
+      const cloud = clouds(i+getFunctionName())
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
@@ -146,8 +151,26 @@ Sun.prototype = {
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
+    const button =document.createElement('button')
+    button.id = 'cloud_button'
+    button.textContent = 'Clouds'
+    $(document).on('click', '#cloud_button', function () {
+      if (haveClouds){
+        for(let i = 0; i <cloudList.length;i++){
+          $('#cloud'+i+getFunctionName()).hide();
+        }
+        haveClouds = false
+      }
+      else{
+        for(let i = 0; i <cloudList.length;i++){
+          $('#cloud'+i+getFunctionName()).show();
+        }
+        haveClouds = true
+      }
+    })
     const body = $('body')
     body.append(box)
+    body.append(button)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Day and Night')
