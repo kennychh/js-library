@@ -23,6 +23,7 @@ Sun.prototype = {
     const that = this
     var sunrise = true
     var cloudList = []
+    var haveClouds = true
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
@@ -66,7 +67,7 @@ Sun.prototype = {
         moon.style.animationDuration = '2s'
         moon.style.animationFillMode = 'forwards'
         sunrise = true
-        for(let i = 0; i <=this.cloudList.length;i++){
+        for(let i = 0; i <=cloudList.length;i++){
           cloudList[i].style.animationName ='cloudyDay'
           cloudList[i].style.animationDuration = '3s'
           cloudList[i].style.animationFillMode = 'forwards'
@@ -77,7 +78,11 @@ Sun.prototype = {
     const button =document.createElement('button')
     button.id = 'cloud_button'
     $(document).on('click', '#cloud_button', function () {
-      that.haveClouds(false)
+      if haveClouds{
+        for(let i = 0; i <=cloudList.length;i++){
+          cloudList[i].remove()
+        }
+      }
     })
     box.append(button)
     box.append(sun)
@@ -134,12 +139,6 @@ Sun.prototype = {
     const text = document.createTextNode('Day and Night')
     title.appendChild(text)
     body.append(title)
-  },
-  haveClouds: function (have = true){
-    if (!have){
-      const c = document.getElementById("cloud");
-      c.remove()
-    }
   }
 }
 
