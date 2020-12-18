@@ -20,6 +20,7 @@ function Sun () {
 Sun.prototype = {
   makeSunMoon: function () {
     var sunrise = true
+    clouds = []
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
@@ -27,6 +28,12 @@ Sun.prototype = {
     const box = document.createElement('div')
     box.className = "sunbox"
     box.id = "sunbox"
+    for(let i = 0; i <=10;i++){
+      const cloud = clouds()
+      clouds.push(cloud)
+      cloud.style.left = (i*50-50)+'px'
+      box.append(cloud)
+    }
     $(document).on('click', '#sunbox', function () {
       if(sunrise){
         box.style.animationName = 'nightsky'
@@ -58,12 +65,6 @@ Sun.prototype = {
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-    for(let i = 0; i <=10;i++){
-      const cloud = clouds()
-      cloud.style.left = (i*50-50)+'px'
-      box.append(cloud)
-
-    }
 
 
     const body = $('body')

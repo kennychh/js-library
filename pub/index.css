@@ -113,7 +113,14 @@ body {
   z-index: 1;
 }
 
-
+@-webkit-keyframes cloudyNight {
+  from {background-color: #fff;}
+  to {background: #333399;}
+}
+@-webkit-keyframes cloudyDay {
+  from {background-color: #333399;}
+  to {background: #fff;}
+}
 @-webkit-keyframes rotateSun{
   0% {transform: rotate(60deg)}
   100% { transform: rotate(420deg); }
