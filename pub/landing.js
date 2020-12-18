@@ -15,4 +15,9 @@ const row1 = document.createElement('div')
 row1.className ='row'
 row1.append(sbox)
 row1.append(smbox)
+const row2 = document.createElement('div')
+row2.className ='row'
+row2.append(snbox)
+row2.append(rbox)
 $('body').append(row1)
+$('body').append(row2)
