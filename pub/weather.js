@@ -20,6 +20,7 @@ function Sun () {
 
 Sun.prototype = {
   makeSunMoon: function () {
+    const that = this
     var sunrise = true
     const sun = document.createElement('div')
     const moon = document.createElement('div')
@@ -71,6 +72,11 @@ Sun.prototype = {
         }
       }
 
+    })
+    const button =document.createElement('button')
+    button.id = 'cloud_button'
+    $(document).on('click', '#cloud_button', function () {
+      that.haveClouds(false)
     })
     box.append(sun)
     box.append(moon)
@@ -128,7 +134,7 @@ Sun.prototype = {
     body.append(title)
   },
   haveClouds: function (have = true){
-    if (have){
+    if (!have){
       const c = document.getElementById("cloud");
       c.remove()
     }
