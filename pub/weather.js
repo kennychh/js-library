@@ -20,7 +20,7 @@ function Sun () {
 Sun.prototype = {
   makeSunMoon: function () {
     var sunrise = true
-    cloudList = []
+    var cloudList = []
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
