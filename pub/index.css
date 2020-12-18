@@ -33,6 +33,10 @@ body {
 }
 
 .button_position {
+  position: relative;
+  margin-right: 50px;
+}
+.button_position button {
   position: absolute;
   bottom: 0px;
 }
