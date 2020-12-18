@@ -9,7 +9,7 @@ html {
   height: 100%
 }
 body {
-  background-color: #fff
+  background-color: #000
 }
 
 .wrapper {
@@ -38,6 +38,7 @@ body {
   font-size: 20px;
   margin-bottom: 50px;
   font-weight: bold;
+  color: #fff
 }
 .box {
   overflow: hidden;
