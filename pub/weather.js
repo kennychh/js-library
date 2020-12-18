@@ -6,7 +6,7 @@ function randRange(min, max) {
 function clouds (){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
-
+  cloud.id = 'cloud'
   cloud.className = 'clouds'
   console.log(width)
   cloud.style.width = width+'px'
@@ -15,12 +15,12 @@ function clouds (){
 }
 function Sun () {
   this.suns = []
+  this.cloudList = []
 }
 
 Sun.prototype = {
   makeSunMoon: function () {
     var sunrise = true
-    var cloudList = []
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
@@ -30,7 +30,7 @@ Sun.prototype = {
     box.id = "sunbox"
     for(let i = 0; i <=10;i++){
       const cloud = clouds()
-      cloudList.push(cloud)
+      this.cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
     }
@@ -47,10 +47,10 @@ Sun.prototype = {
         moon.style.animationFillMode = 'forwards'
         sunrise = false
 
-        for(let i = 0; i <=cloudList.length;i++){
-          cloudList[i].style.animationName ='cloudyNight'
-          cloudList[i].style.animationDuration = '3s'
-          cloudList[i].style.animationFillMode = 'forwards'
+        for(let i = 0; i <=this.cloudList.length;i++){
+          this.cloudList[i].style.animationName ='cloudyNight'
+          this.cloudList[i].style.animationDuration = '3s'
+          this.cloudList[i].style.animationFillMode = 'forwards'
         }
       }
       else{
@@ -64,10 +64,10 @@ Sun.prototype = {
         moon.style.animationDuration = '2s'
         moon.style.animationFillMode = 'forwards'
         sunrise = true
-        for(let i = 0; i <=cloudList.length;i++){
-          cloudList[i].style.animationName ='cloudyDay'
-          cloudList[i].style.animationDuration = '3s'
-          cloudList[i].style.animationFillMode = 'forwards'
+        for(let i = 0; i <=this.cloudList.length;i++){
+          this.cloudList[i].style.animationName ='cloudyDay'
+          this.cloudList[i].style.animationDuration = '3s'
+          this.cloudList[i].style.animationFillMode = 'forwards'
         }
       }
 
@@ -76,7 +76,6 @@ Sun.prototype = {
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-
 
     const body = $('body')
     body.append(box)
@@ -127,6 +126,12 @@ Sun.prototype = {
     const text = document.createTextNode('Day and Night')
     title.appendChild(text)
     body.append(title)
+  },
+  haveClouds: function (have = true){
+    if (have){
+      const c = document.getElementById("cloud");
+      c.remove()
+    }
   }
 }
 
