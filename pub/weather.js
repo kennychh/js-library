@@ -167,6 +167,9 @@ Rain.prototype = {
     $(document).on('click', '#rain_button3', function () {
       this.raindrops = this.raindrops.save
     })
+    box.append(button)
+    box.append(button2)
+    box.append(button3)
     const body = $('body')
     body.append(box)
     const title = document.createElement('header')
