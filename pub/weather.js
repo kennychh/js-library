@@ -306,7 +306,7 @@ function Snow () {
 }
 
 Snow.prototype = {
-  snow: function (intensity = 200, haveButtons) {
+  snow: function (intensity = 200, haveButtons = true) {
     const that = this
     const box = document.createElement('div')
     box.className = "box"
