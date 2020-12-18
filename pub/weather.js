@@ -115,6 +115,7 @@ Sun.prototype = {
 
     const body = $('body')
     body.append(box)
+    return box
   },
   makeNightDay: function(isItCloudy = true, haveButtons =  true){
     const sun = document.createElement('div')
@@ -186,6 +187,7 @@ Sun.prototype = {
     }
     const body = $('body')
     body.append(box)
+    return box
   }
 }
 
@@ -252,6 +254,7 @@ Rain.prototype = {
     }
     const body = $('body')
     body.append(box)
+    return box
   },
   intensity: function (intense) {
     if (intense == 0){
@@ -360,6 +363,7 @@ Snow.prototype = {
     }
     const body = $('body')
     body.append(box)
+    return box
   },
   speed: function(speed){
     for (let i = 0; i < this.snowflakes.length;i++){
