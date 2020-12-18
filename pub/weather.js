@@ -83,9 +83,9 @@ Sun.prototype = {
         }
       }
     })
-    box.append(button)
     box.append(sun)
     box.append(moon)
+    box.append(button)
     this.suns.push(sun)
     this.suns.push(moon)
 
