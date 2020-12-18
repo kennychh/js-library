@@ -178,7 +178,7 @@ Rain.prototype = {
     const text = document.createTextNode('Rain')
     title.appendChild(text)
     body.append(title)
-  }
+  },
   intensity: function (intense) {
     if (intense == 0){
       for (let i = 0; i < this.raindrops.length;i= i +2){
