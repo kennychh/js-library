@@ -181,7 +181,7 @@ Rain.prototype = {
   },
   intensity: function (intense) {
     if (intense == 0){
-      for (let i = 0; i < 400;i= i++){
+      for (let i = 0; i < 400;i++){
         this.raindrops[i].style.opacity= 0
       }
     }
