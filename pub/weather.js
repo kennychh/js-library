@@ -3,6 +3,14 @@ function randRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function addTitle(str) {
+  const body = $('body')
+  const title = document.createElement('header')
+  title.className = 'header'
+  const text = document.createTextNode(str)
+  title.appendChild(text)
+  body.append(title)
+}
 function clouds (i){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
@@ -105,11 +113,6 @@ Sun.prototype = {
 
     const body = $('body')
     body.append(box)
-    const title = document.createElement('header')
-    title.className = 'header'
-    const text = document.createTextNode('Rising Sun and Moon (Click me!)')
-    title.appendChild(text)
-    body.append(title)
   },
   makeNightDay: function(isItCloudy = true, haveButtons =  true){
     const sun = document.createElement('div')
@@ -179,11 +182,6 @@ Sun.prototype = {
     }
     const body = $('body')
     body.append(box)
-    const title = document.createElement('header')
-    title.className = 'header'
-    const text = document.createTextNode('Day and Night')
-    title.appendChild(text)
-    body.append(title)
   }
 }
 
@@ -250,12 +248,6 @@ Rain.prototype = {
     }
     const body = $('body')
     body.append(box)
-
-    const title = document.createElement('header')
-    title.className = 'header'
-    const text = document.createTextNode('Rain')
-    title.appendChild(text)
-    body.append(title)
   },
   intensity: function (intense) {
     if (intense == 0){
@@ -365,13 +357,6 @@ Snow.prototype = {
 
 
     const body = $('body')
-    const title = document.createElement('header')
-    title.className = 'header'
-    const text = document.createTextNode('Snow')
-    title.appendChild(text)
-    body.append(box)
-
-    body.append(title)
   },
   speed: function(speed){
     for (let i = 0; i < this.snowflakes.length;i++){
