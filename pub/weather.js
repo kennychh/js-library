@@ -8,7 +8,6 @@ function clouds (i){
   const width = randRange(80,150)
   cloud.className = 'clouds'
   cloud.id ='cloud'+i
-  console.log(width)
   cloud.style.width = width+'px'
   cloud.style.height = width+'px'
   return cloud;
@@ -18,7 +17,7 @@ function Sun () {
 }
 
 Sun.prototype = {
-  makeSunMoon: function (isItCloudy =true) {
+  makeSunMoon: function (isItCloudy =true, haveButtons = true) {
     const that = this
     var sunrise = true
     var cloudList = []
@@ -74,24 +73,30 @@ Sun.prototype = {
       }
 
     })
-    const button =document.createElement('button')
-    button.id = 'cloud2_button'
-    button.className = 'button_position'
-    button.textContent = 'Clouds'
-    $(document).on('click', '#cloud2_button', function () {
-      if (haveClouds){
-        for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeSunMoon").hide();
+    if(haveButtons){
+      const button =document.createElement('button')
+      button.id = 'cloud2_button'
+      button.className = 'button_position'
+      button.textContent = 'Clouds'
+      $(document).on('click', '#cloud2_button', function () {
+        if (haveClouds){
+          for(let i = 0; i <cloudList.length;i++){
+            $('#cloud'+i+"makeSunMoon").hide();
+          }
+          haveClouds = false
         }
-        haveClouds = false
-      }
-      else{
-        for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeSunMoon").show();
+        else{
+          for(let i = 0; i <cloudList.length;i++){
+            $('#cloud'+i+"makeSunMoon").show();
+          }
+          haveClouds = true
         }
-        haveClouds = true
-      }
-    })
+      })
+      const wrapper = document.createElement('div')
+      wrapper.className = 'wrapper'
+      wrapper.append(button)
+      box.append(wrapper)
+    }
     box.append(sun)
     box.append(moon)
 
@@ -100,17 +105,13 @@ Sun.prototype = {
 
     const body = $('body')
     body.append(box)
-    const wrapper = document.createElement('div')
-    wrapper.className = 'wrapper'
-    wrapper.append(button)
-    box.append(wrapper)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rising Sun and Moon (Click me!)')
     title.appendChild(text)
     body.append(title)
   },
-  makeNightDay: function(isItCloudy = true){
+  makeNightDay: function(isItCloudy = true, haveButtons =  true){
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     var cloudList = []
@@ -152,30 +153,32 @@ Sun.prototype = {
     box.append(moon)
     this.suns.push(sun)
     this.suns.push(moon)
-    const button =document.createElement('button')
-    button.id = 'cloud_button'
-    button.className = 'button_position'
-    button.textContent = 'Clouds'
-    $(document).on('click', '#cloud_button', function () {
-      if (haveClouds){
-        for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeNightDay").hide();
+    if(haveButtons){
+      const button =document.createElement('button')
+      button.id = 'cloud2_button'
+      button.className = 'button_position'
+      button.textContent = 'Clouds'
+      $(document).on('click', '#cloud2_button', function () {
+        if (haveClouds){
+          for(let i = 0; i <cloudList.length;i++){
+            $('#cloud'+i+"makeNightDay").hide();
+          }
+          haveClouds = false
         }
-        haveClouds = false
-      }
-      else{
-        for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+"makeNightDay").show();
+        else{
+          for(let i = 0; i <cloudList.length;i++){
+            $('#cloud'+i+"makeNightDay").show();
+          }
+          haveClouds = true
         }
-        haveClouds = true
-      }
-    })
+      })
+      const wrapper = document.createElement('div')
+      wrapper.className = 'wrapper'
+      wrapper.append(button)
+      box.append(wrapper)
+    }
     const body = $('body')
     body.append(box)
-    const wrapper = document.createElement('div')
-    wrapper.className = 'wrapper'
-    wrapper.append(button)
-    box.append(wrapper)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Day and Night')
@@ -190,7 +193,7 @@ function Rain () {
 }
 Rain.prototype = {
 
-  makeItRain: function () {
+  makeItRain: function (haveButtons = true) {
     const that = this
     const box = document.createElement('div')
     box.className = "box"
@@ -216,35 +219,38 @@ Rain.prototype = {
       this.raindrops.push(raindrop)
       this.raindrops_save.push(raindrop)
     }
-    const button =document.createElement('button')
-    button.id = 'rain_button'
-    button.className = 'button_position'
-    button.textContent = 'Light'
-    const button2 =document.createElement('button')
-    button2.id = 'rain_button2'
-    button2.className = 'button_position'
-    button2.textContent = 'Normal'
-    const button3 =document.createElement('button')
-    button3.id = 'rain_button3'
-    button3.className = 'button_position'
-    button3.textContent = 'Heavy'
-    $(document).on('click', '#rain_button', function () {
-      that.intensity(0)
-    })
-    $(document).on('click', '#rain_button2', function () {
-      that.intensity(1)
-    })
-    $(document).on('click', '#rain_button3', function () {
-      that.intensity(2)
-    })
+    if (haveButtons) {
+      const button =document.createElement('button')
+      button.id = 'rain_button'
+      button.className = 'button_position'
+      button.textContent = 'Light'
+      const button2 =document.createElement('button')
+      button2.id = 'rain_button2'
+      button2.className = 'button_position'
+      button2.textContent = 'Normal'
+      const button3 =document.createElement('button')
+      button3.id = 'rain_button3'
+      button3.className = 'button_position'
+      button3.textContent = 'Heavy'
+      $(document).on('click', '#rain_button', function () {
+        that.intensity(0)
+      })
+      $(document).on('click', '#rain_button2', function () {
+        that.intensity(1)
+      })
+      $(document).on('click', '#rain_button3', function () {
+        that.intensity(2)
+      })
+      const wrapper = document.createElement('div')
+      wrapper.className = 'wrapper'
+      wrapper.append(button)
+      wrapper.append(button2)
+      wrapper.append(button3)
+      box.append(wrapper)
+    }
     const body = $('body')
     body.append(box)
-    const wrapper = document.createElement('div')
-    wrapper.className = 'wrapper'
-    wrapper.append(button)
-    wrapper.append(button2)
-    wrapper.append(button3)
-    box.append(wrapper)
+
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rain')
@@ -300,7 +306,7 @@ function Snow () {
 }
 
 Snow.prototype = {
-  snow: function (intensity = 200) {
+  snow: function (intensity = 200, haveButtons) {
     const that = this
     const box = document.createElement('div')
     box.className = "box"
@@ -327,27 +333,35 @@ Snow.prototype = {
       this.snowflakes.push(snowflake)
       this.duration.push(duration)
     }
-    const button =document.createElement('button')
-    button.id = 'snow_speed_button'
-    button.className = 'button_position'
-    button.textContent = 'Faster'
-    const button2 =document.createElement('button')
-    button2.id = 'snow_speed_button2'
-    button2.className = 'button_position'
-    button2.textContent = 'Normal'
-    const button3 =document.createElement('button')
-    button3.id = 'snow_speed_button3'
-    button3.className = 'button_position'
-    button3.textContent = 'Slower'
-    $(document).on('click', '#snow_speed_button', function () {
-      that.speed(0.5)
-    })
-    $(document).on('click', '#snow_speed_button2', function () {
-      that.speed(1)
-    })
-    $(document).on('click', '#snow_speed_button3', function () {
-      that.speed(2)
-    })
+    if(haveButtons) {
+      const button =document.createElement('button')
+      button.id = 'snow_speed_button'
+      button.className = 'button_position'
+      button.textContent = 'Faster'
+      const button2 =document.createElement('button')
+      button2.id = 'snow_speed_button2'
+      button2.className = 'button_position'
+      button2.textContent = 'Normal'
+      const button3 =document.createElement('button')
+      button3.id = 'snow_speed_button3'
+      button3.className = 'button_position'
+      button3.textContent = 'Slower'
+      $(document).on('click', '#snow_speed_button', function () {
+        that.speed(0.5)
+      })
+      $(document).on('click', '#snow_speed_button2', function () {
+        that.speed(1)
+      })
+      $(document).on('click', '#snow_speed_button3', function () {
+        that.speed(2)
+      })
+      const wrapper = document.createElement('div')
+      wrapper.className = 'wrapper'
+      wrapper.append(button)
+      wrapper.append(button2)
+      wrapper.append(button3)
+      box.append(wrapper)
+    }
 
 
     const body = $('body')
@@ -356,12 +370,7 @@ Snow.prototype = {
     const text = document.createTextNode('Snow')
     title.appendChild(text)
     body.append(box)
-    const wrapper = document.createElement('div')
-    wrapper.className = 'wrapper'
-    wrapper.append(button)
-    wrapper.append(button2)
-    wrapper.append(button3)
-    box.append(wrapper)
+
     body.append(title)
   },
   speed: function(speed){
