@@ -3,10 +3,6 @@ function randRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getFunctionName() {
-   return getFunctionName.caller.name
-}
-
 function clouds (i){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
@@ -35,7 +31,7 @@ Sun.prototype = {
     box.className = "sunbox"
     box.id = "sunbox"
     for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+getFunctionName())
+      const cloud = clouds(i+"makeSunMoon")
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
@@ -119,7 +115,7 @@ Sun.prototype = {
     sun.className = "sun"
     const box = document.createElement('div')
     for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+getFunctionName())
+      const cloud = clouds(i+"makeNightDay")
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
