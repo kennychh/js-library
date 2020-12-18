@@ -78,6 +78,7 @@ Sun.prototype = {
     $(document).on('click', '#cloud_button', function () {
       that.haveClouds(false)
     })
+    box.append(button)
     box.append(sun)
     box.append(moon)
     this.suns.push(sun)
