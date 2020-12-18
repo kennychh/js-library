@@ -32,9 +32,6 @@ body {
   background-color: #fff
 }
 
-.image {
-  text-align: center;
-}
 .wrapper {
   position: relative;
   top: 100%;
@@ -126,6 +123,21 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
+}
+
+#smImg {
+  text-align: center;
+}
+
+#snImg {
+  text-align: center;
+}
+#ndImg {
+  text-align: center;
+}
+
+#rImg {
+  text-align: center;
 }
 
 @-webkit-keyframes cloudyNight {
