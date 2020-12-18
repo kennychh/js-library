@@ -32,13 +32,15 @@ body {
   background-color: #fff
 }
 
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
 .button_position {
   position: relative;
-  margin-right: 50px;
-}
-.button_position button {
-  position: absolute;
-  bottom: 0px;
+  margin-right: 20px;
+  top: 100%;
+  transform: translateY(-100%);
 }
 .clouds {
   position: absolute;

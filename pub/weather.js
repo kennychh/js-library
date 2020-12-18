@@ -100,7 +100,10 @@ Sun.prototype = {
 
     const body = $('body')
     body.append(box)
-    box.append(button)
+    const wrapper = document.createElement('div')
+    wrapper.className = 'wrapper'
+    wrapper.append(button)
+    box.append(wrapper)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rising Sun and Moon (Click me!)')
@@ -169,7 +172,10 @@ Sun.prototype = {
     })
     const body = $('body')
     body.append(box)
-    box.append(button)
+    const wrapper = document.createElement('div')
+    wrapper.className = 'wrapper'
+    wrapper.append(button)
+    box.append(wrapper)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Day and Night')
@@ -233,9 +239,12 @@ Rain.prototype = {
     })
     const body = $('body')
     body.append(box)
-    box.append(button)
-    box.append(button2)
-    box.append(button3)
+    const wrapper = document.createElement('div')
+    wrapper.className = 'wrapper'
+    wrapper.append(button)
+    wrapper.append(button2)
+    wrapper.append(button3)
+    box.append(wrapper)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rain')
@@ -347,9 +356,12 @@ Snow.prototype = {
     const text = document.createTextNode('Snow')
     title.appendChild(text)
     body.append(box)
-    box.append(button)
-    box.append(button2)
-    box.append(button3)
+    const wrapper = document.createElement('div')
+    wrapper.className = 'wrapper'
+    wrapper.append(button)
+    wrapper.append(button2)
+    wrapper.append(button3)
+    box.append(wrapper)
     body.append(title)
   },
   speed: function(speed){
