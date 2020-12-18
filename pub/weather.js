@@ -226,11 +226,11 @@ Rain.prototype = {
     $(document).on('click', '#rain_button3', function () {
       that.intensity(2)
     })
-    box.append(button)
-    box.append(button2)
-    box.append(button3)
     const body = $('body')
     body.append(box)
+    body.append(button)
+    body.append(button2)
+    body.append(button3)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rain')
@@ -332,15 +332,16 @@ Snow.prototype = {
       that.speed(2)
     })
 
-    box.append(button)
-    box.append(button2)
-    box.append(button3)
+
     const body = $('body')
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Snow')
     title.appendChild(text)
     body.append(box)
+    body.append(button)
+    body.append(button2)
+    body.append(button3)
     body.append(title)
   },
   speed: function(speed){
