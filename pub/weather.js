@@ -77,8 +77,12 @@ Sun.prototype = {
     button.id = 'cloud_button'
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
-        console.log('button pressed')
-        $('.clouds').remove();
+        $('.clouds').hide());
+        haveClouds = false
+      }
+      else{
+        $('.clouds').show());
+        haveClouds = true
       }
     })
     box.append(sun)
