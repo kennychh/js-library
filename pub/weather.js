@@ -20,7 +20,7 @@ function Sun () {
 Sun.prototype = {
   makeSunMoon: function () {
     var sunrise = true
-    clouds = []
+    cloudList = []
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
@@ -30,7 +30,7 @@ Sun.prototype = {
     box.id = "sunbox"
     for(let i = 0; i <=10;i++){
       const cloud = clouds()
-      clouds.push(cloud)
+      cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
     }
