@@ -160,12 +160,15 @@ Rain.prototype = {
     button3.textContent = 'Heavy'
     $(document).on('click', '#rain_button', function () {
       this.raindrops = this.raindrops.save.slice(1,100)
+      box.append(raindrop)
     })
     $(document).on('click', '#rain_button2', function () {
       this.raindrops = this.raindrops.save.slice(1,300)
+      box.append(raindrop)
     })
     $(document).on('click', '#rain_button3', function () {
       this.raindrops = this.raindrops.save
+      box.append(raindrop)s
     })
     box.append(button)
     box.append(button2)
