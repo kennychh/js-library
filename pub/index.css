@@ -115,10 +115,10 @@ body {
 
 @-webkit-keyframes cloudyNight {
   from {background-color: #fff;}
-  to {background: #333399;}
+  to {background: #333366;}
 }
 @-webkit-keyframes cloudyDay {
-  from {background-color: #333399;}
+  from {background-color: #333366;}
   to {background: #fff;}
 }
 @-webkit-keyframes rotateSun{
