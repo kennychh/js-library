@@ -78,7 +78,7 @@ Sun.prototype = {
     const button =document.createElement('button')
     button.id = 'cloud_button'
     $(document).on('click', '#cloud_button', function () {
-      if haveClouds{
+      if (haveClouds){
         for(let i = 0; i <=cloudList.length;i++){
           cloudList[i].remove()
         }
