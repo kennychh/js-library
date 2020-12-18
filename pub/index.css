@@ -126,18 +126,26 @@ body {
 }
 
 #smImg {
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #snImg {
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #ndImg {
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #rImg {
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @-webkit-keyframes cloudyNight {
