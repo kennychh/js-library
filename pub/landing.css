@@ -1,6 +1,6 @@
 .box {
   overflow: hidden;
-  width: 500px;
+  width: 50%;
   height: 500px;
   position: relative;
   float:left;
@@ -10,7 +10,7 @@
 .sbox {
   display: block;
   overflow: hidden;
-  width: 500px;
+  width: 50%;
   float: left;
   height: 500px;
   position: relative;
@@ -18,7 +18,7 @@
 }
 
 .row {
-  width: 1000px;
+  width: 100%;
   height: 500px;
   position: relative;
   margin-left: auto;

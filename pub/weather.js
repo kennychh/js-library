@@ -38,7 +38,7 @@ Sun.prototype = {
     box.className = "sunbox"
     box.id = "sunbox"
     if(haveClouds) {
-      for(let i = 0; i <=10;i++){
+      for(let i = 0; i <=50;i++){
         const cloud = clouds(i+"makeSunMoon")
         cloudList.push(cloud)
         cloud.style.left = (i*50-50)+'px'
@@ -126,7 +126,7 @@ Sun.prototype = {
     sun.className = "sun"
     const box = document.createElement('div')
     if(haveClouds){
-      for(let i = 0; i <=10;i++){
+      for(let i = 0; i <=50;i++){
         const cloud = clouds(i+"makeNightDay")
         cloudList.push(cloud)
         cloud.style.left = (i*50-50)+'px'
