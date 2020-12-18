@@ -3,10 +3,11 @@ function randRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function clouds (){
+function clouds (i){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
   cloud.className = 'clouds'
+  cloud.id ='cloud'+i
   console.log(width)
   cloud.style.width = width+'px'
   cloud.style.height = width+'px'
@@ -30,7 +31,7 @@ Sun.prototype = {
     box.className = "sunbox"
     box.id = "sunbox"
     for(let i = 0; i <=10;i++){
-      const cloud = clouds()
+      const cloud = clouds(i+'makeSunMoon')
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
@@ -77,11 +78,15 @@ Sun.prototype = {
     button.id = 'cloud_button'
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
-        $('.clouds').hide();
+        for(let i = 0; i <cloudList.length;i++){
+          $('#cloud'+i+"makeSunMoon").hide();
+        }
         haveClouds = false
       }
       else{
-        $('.clouds').show();
+        for(let i = 0; i <cloudList.length;i++){
+          $('#cloud'+i+"makeSunMoon").show();
+        }
         haveClouds = true
       }
     })
@@ -108,7 +113,7 @@ Sun.prototype = {
     sun.className = "sun"
     const box = document.createElement('div')
     for(let i = 0; i <=10;i++){
-      const cloud = clouds()
+      const cloud = clouds(i+'makeNightDay')
       cloudList.push(cloud)
       cloud.style.left = (i*50-50)+'px'
       box.append(cloud)
