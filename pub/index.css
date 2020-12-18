@@ -1,24 +1,4 @@
-$app-width: 800px;
-$app-height: 370px;
-$color-building-dark: var(--color-building-dark);
-$color-building: var(--color-building);
-$color-building-light: var(--color-building-light);
 
-$color-window-dark: var(--color-window-dark);
-$color-window-light: var(--color-window-light);
-$color-pointy: var(--color-pointy);
-$color-cloud-sunrise: white;
-$color-cloud-sunset: #9ED5F8;
-$color-sunrise-zenith: #2CA4F4;
-$color-sunrise-horizon: #C2E6FB;
-$color-sunset-zenith: #043385;
-$color-sunset-horizon: #1797D7;
-$color-sun: #FFFAAD;
-$color-moon: white;
-
-$duration: 1.5s;
-$half-duration: $duration / 2;
-$easing: cubic-bezier(.25, 0, .1, 1);
 
 :root {
   --snow_left;
