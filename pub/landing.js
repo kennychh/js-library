@@ -19,5 +19,11 @@ const row2 = document.createElement('div')
 row2.className ='row'
 row2.append(snbox)
 row2.append(rbox)
+
+const button =document.createElement('button')
+button.id = 'examples'
+button.textContent = 'Examples'
+button.href = "./examples.html"
 $('body').append(row1)
+$('body').append(button)
 $('body').append(row2)
