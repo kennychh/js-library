@@ -84,13 +84,13 @@ Sun.prototype = {
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+getFunctionName()).hide();
+          $('#cloud'+i+"makeSunMoon").hide();
         }
         haveClouds = false
       }
       else{
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+getFunctionName()).show();
+          $('#cloud'+i+"makeSunMoon").show();
         }
         haveClouds = true
       }
@@ -158,13 +158,13 @@ Sun.prototype = {
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+getFunctionName()).hide();
+          $('#cloud'+i+"makeNightDay").hide();
         }
         haveClouds = false
       }
       else{
         for(let i = 0; i <cloudList.length;i++){
-          $('#cloud'+i+getFunctionName()).show();
+          $('#cloud'+i+"makeNightDay").show();
         }
         haveClouds = true
       }
