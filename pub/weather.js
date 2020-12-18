@@ -125,6 +125,7 @@ function Rain () {
 Rain.prototype = {
 
   makeItRain: function () {
+    const that = this
     const box = document.createElement('div')
     box.className = "box"
     box.style.backgroundColor = '#131339'
@@ -159,16 +160,13 @@ Rain.prototype = {
     button3.id = 'rain_button3'
     button3.textContent = 'Heavy'
     $(document).on('click', '#rain_button', function () {
-      this.raindrops = this.raindrops.save.slice(1,100)
-      box.append(raindrop)
+      for
     })
     $(document).on('click', '#rain_button2', function () {
       this.raindrops = this.raindrops.save.slice(1,300)
-      box.append(raindrop)
     })
     $(document).on('click', '#rain_button3', function () {
       this.raindrops = this.raindrops.save
-      box.append(raindrop)s
     })
     box.append(button)
     box.append(button2)
@@ -180,6 +178,29 @@ Rain.prototype = {
     const text = document.createTextNode('Rain')
     title.appendChild(text)
     body.append(title)
+  }
+  intensity: function (intense) {
+    if (intense == 0){
+      for (let i = 0; i < this.raindrops.length;i= i +2){
+        this.raindrops[i].style.opacity= 0
+      }
+    }
+    else if (intense == 1){
+      for (let i = 0; i < this.raindrops.length;i= i+4){
+        this.raindrops[i].style.opacity= 0
+      }
+    }
+    else {
+      for (let i = 0; i < this.raindrops.length;i++){
+        const op = randRange(1, 3)
+        if(op == 1){
+          this.raindrops[i].style.opacity= 0.3
+        }
+        else if (op == 2){
+          this.raindrops[i].style.opacity= 0.6
+        }
+      }
+    }
   }
 }
 
