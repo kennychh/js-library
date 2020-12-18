@@ -23,7 +23,9 @@ row2.append(rbox)
 const button =document.createElement('button')
 button.id = 'examples'
 button.textContent = 'Examples'
-button.href = "./examples.html"
+$(document).on('click', '#examples', function () {
+  window.location = "./examples.html";
+})
 $('body').append(row1)
 $('body').append(button)
 $('body').append(row2)
