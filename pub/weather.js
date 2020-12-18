@@ -6,7 +6,6 @@ function randRange(min, max) {
 function clouds (){
   const cloud = document.createElement('div')
   const width = randRange(80,150)
-  cloud.id = 'cloud'
   cloud.className = 'clouds'
   console.log(width)
   cloud.style.width = width+'px'
@@ -78,9 +77,8 @@ Sun.prototype = {
     button.id = 'cloud_button'
     $(document).on('click', '#cloud_button', function () {
       if (haveClouds){
-        for(let i = 0; i <cloudList.length;i++){
-          cloudList[i].remove()
-        }
+        console.log('button pressed')
+        $('.clouds').remove();
       }
     })
     box.append(sun)
