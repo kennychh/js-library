@@ -181,11 +181,29 @@ Rain.prototype = {
   },
   intensity: function (intense) {
     if (intense == 0){
+      for (let i = 0; i < this.raindrops.length;i++){
+        const op = randRange(1, 3)
+        if(op == 1){
+          this.raindrops[i].style.opacity= 0.3
+        }
+        else if (op == 2){
+          this.raindrops[i].style.opacity= 0.6
+        }
+      }
       for (let i = 0; i < 500;i++){
         this.raindrops[i].style.opacity= 0
       }
     }
     else if (intense == 1){
+      for (let i = 0; i < this.raindrops.length;i++){
+        const op = randRange(1, 3)
+        if(op == 1){
+          this.raindrops[i].style.opacity= 0.3
+        }
+        else if (op == 2){
+          this.raindrops[i].style.opacity= 0.6
+        }
+      }
       for (let i = 0; i < 400;i= i+4){
         this.raindrops[i].style.opacity= 0
       }
