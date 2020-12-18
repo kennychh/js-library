@@ -26,6 +26,9 @@ button.textContent = 'Examples'
 $(document).on('click', '#examples', function () {
   window.location = "./examples.html";
 })
+const examplesWrapper = document.createElement('div')
+examplesWrapper.id = "examples_wrapper"
+examplesWrapper.append(button)
 $('body').append(row1)
 $('body').append(button)
 $('body').append(row2)

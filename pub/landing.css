@@ -7,6 +7,10 @@
   display: block;
 }
 
+#examples_wrapper {
+  text-align: center;
+  position: relative
+}
 .sbox {
   display: block;
   overflow: hidden;
