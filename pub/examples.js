@@ -6,18 +6,22 @@ const sn = new Snow()
 
 const smImg = document.createElement('IMG')
 smImg.id = 'smImg'
+smImg.classname = 'image'
 smImg.src = "images/makeSunMoonCode.png"
 
 const ndImg = document.createElement('IMG')
 ndImg.id = 'ndImg'
+ndImg.classname = 'image'
 ndImg.src = "images/makeNightDayCode.png"
 
 const rImg = document.createElement('IMG')
 rImg.id = 'rImg'
+rImg.classname = 'image'
 rImg.src = "images/makeRainCode.png"
 
 const snImg = document.createElement('IMG')
 snImg.id = 'snImg'
+snImg.classname = 'image'
 snImg.src = "images/makeSnowCode.png"
 
 s.makeSunMoon(false, false)

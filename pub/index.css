@@ -32,6 +32,9 @@ body {
   background-color: #fff
 }
 
+.image {
+  text-align: center;
+}
 .wrapper {
   position: relative;
   top: 100%;
