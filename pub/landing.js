@@ -12,5 +12,6 @@ const rbox = r.makeItRain(false)
 rbox.className = 'box'
 
 const row1 = document.createElement('div')
+row1.className ='row'
 row1.append(sbox)
 row1.append(smbox)

@@ -25,6 +25,8 @@
   background-color: #3399ff
 }
 
-#rightbox  {
-  clear:right;
+.row {
+  width: 1000px;
+  height: 500px;
+  position: relative;
 }
