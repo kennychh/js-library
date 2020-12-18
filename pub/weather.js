@@ -46,6 +46,12 @@ Sun.prototype = {
         moon.style.animationDuration = '2s'
         moon.style.animationFillMode = 'forwards'
         sunrise = false
+
+        for(let i = 0; i <=cloudList.length;i++){
+          cloudList[i].style.animationName ='cloudyNight'
+          cloudList[i].style.animationDuration = '3s'
+          cloudList[i].style.animationFillMode = 'forwards'
+        }
       }
       else{
         box.style.animationName = 'bluesky'
