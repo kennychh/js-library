@@ -33,7 +33,8 @@ body {
 }
 
 .button {
-  bottom: 0px
+  bottom: 0px;
+  right: 0px
 }
 .clouds {
   position: absolute;
