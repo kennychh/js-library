@@ -3,6 +3,7 @@
   width: 500px;
   height: 500px;
   position: relative;
+  float:left;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,6 +25,6 @@
   background-color: #3399ff
 }
 
-#smbox  {
-  clear:left;
+#rightbox  {
+  clear:right;
 }
