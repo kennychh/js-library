@@ -15,7 +15,6 @@ function clouds (){
 }
 function Sun () {
   this.suns = []
-  this.cloudList = new Array ()
 }
 
 Sun.prototype = {
