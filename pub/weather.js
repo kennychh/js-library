@@ -306,10 +306,11 @@ function Snow () {
 
 Snow.prototype = {
   snow: function (intensity = 200, haveButtons = true) {
+    const body = $('body')
     const that = this
     const box = document.createElement('div')
     box.className = "box"
-    let width = box.offsetWidth
+    let width = body.width()
     box.style.backgroundColor = '#131339'
     for (let i = 1; i < intensity; i++){
       const dropLeft = randRange(0, width)
@@ -362,7 +363,6 @@ Snow.prototype = {
       wrapper.append(button3)
       box.append(wrapper)
     }
-    const body = $('body')
     body.append(box)
     return box
   },
