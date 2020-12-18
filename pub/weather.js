@@ -37,11 +37,13 @@ Sun.prototype = {
     const box = document.createElement('div')
     box.className = "sunbox"
     box.id = "sunbox"
-    for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+"makeSunMoon")
-      cloudList.push(cloud)
-      cloud.style.left = (i*50-50)+'px'
-      box.append(cloud)
+    if(haveClouds) {
+      for(let i = 0; i <=10;i++){
+        const cloud = clouds(i+"makeSunMoon")
+        cloudList.push(cloud)
+        cloud.style.left = (i*50-50)+'px'
+        box.append(cloud)
+      }
     }
     $(document).on('click', '#sunbox', function () {
       if(sunrise){
@@ -122,11 +124,13 @@ Sun.prototype = {
     moon.className = 'moon'
     sun.className = "sun"
     const box = document.createElement('div')
-    for(let i = 0; i <=10;i++){
-      const cloud = clouds(i+"makeNightDay")
-      cloudList.push(cloud)
-      cloud.style.left = (i*50-50)+'px'
-      box.append(cloud)
+    if(haveClouds){
+      for(let i = 0; i <=10;i++){
+        const cloud = clouds(i+"makeNightDay")
+        cloudList.push(cloud)
+        cloud.style.left = (i*50-50)+'px'
+        box.append(cloud)
+      }
     }
     box.className = "sunbox"
     sun.style.top = '620px'
