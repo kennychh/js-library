@@ -114,6 +114,7 @@ Sun.prototype = {
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     var cloudList = []
+    var haveClouds = true
     moon.className = 'moon'
     sun.className = "sun"
     const box = document.createElement('div')
