@@ -354,9 +354,8 @@ Snow.prototype = {
       wrapper.append(button3)
       box.append(wrapper)
     }
-
-
     const body = $('body')
+    body.append(box)
   },
   speed: function(speed){
     for (let i = 0; i < this.snowflakes.length;i++){
