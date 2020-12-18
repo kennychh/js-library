@@ -18,11 +18,11 @@ function Sun () {
 }
 
 Sun.prototype = {
-  makeSunMoon: function () {
+  makeSunMoon: function (isItCloudy =true) {
     const that = this
     var sunrise = true
     var cloudList = []
-    var haveClouds = true
+    var haveClouds = isItCloudy
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     moon.className = 'moon'
@@ -110,11 +110,11 @@ Sun.prototype = {
     title.appendChild(text)
     body.append(title)
   },
-  makeNightDay: function(){
+  makeNightDay: function(isItCloudy = true){
     const sun = document.createElement('div')
     const moon = document.createElement('div')
     var cloudList = []
-    var haveClouds = true
+    var haveClouds = isItCloudy
     moon.className = 'moon'
     sun.className = "sun"
     const box = document.createElement('div')
