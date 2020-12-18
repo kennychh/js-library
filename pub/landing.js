@@ -15,3 +15,4 @@ const row1 = document.createElement('div')
 row1.className ='row'
 row1.append(sbox)
 row1.append(smbox)
+$('body').append(row1)
