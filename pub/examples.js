@@ -9,7 +9,7 @@ makeSunMoonCode.id = "makeSunMoonCode"
 $('#makeSunMoonCode').prepend('<img id="makeSunMoonCode" src="images/makeSunMoonCode.png" />')
 s.makeSunMoon(false, false)
 addTitle('Sun and Moon')
-$('body').append()
+$('body').append(makeSunMoonCode)
 s.makeNightDay(makeSunMoonCode)
 addTitle('Night and Day')
 sn.snow(50)
