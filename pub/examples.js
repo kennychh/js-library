@@ -6,7 +6,10 @@ const sn = new Snow()
 
 const makeSunMoonCode = document.createElement('div')
 makeSunMoonCode.id = "makeSunMoonCode"
-$('#makeSunMoonCode').append('<img id="makeSunMoonCode" src="./images/makeSunMoonCode.png" />')
+const smImg = document.createElement('img')
+smImg.id = 'smImg'
+smImg.src = "./images/makeSunMoonCode.png"
+$('#makeSunMoonCode').append(smImg)
 s.makeSunMoon(false, false)
 addTitle('Sun and Moon')
 $('body').append(makeSunMoonCode)
