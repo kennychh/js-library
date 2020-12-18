@@ -75,9 +75,9 @@ Sun.prototype = {
 
     })
     const button =document.createElement('button')
-    button.id = 'cloud_button'
+    button.id = 'cloud2_button'
     button.textContent = 'Clouds'
-    $(document).on('click', '#cloud_button', function () {
+    $(document).on('click', '#cloud2_button', function () {
       if (haveClouds){
         for(let i = 0; i <cloudList.length;i++){
           $('#cloud'+i+"makeSunMoon").hide();
