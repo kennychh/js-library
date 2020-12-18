@@ -83,12 +83,13 @@ Sun.prototype = {
     })
     box.append(sun)
     box.append(moon)
-    box.append(button)
+
     this.suns.push(sun)
     this.suns.push(moon)
 
     const body = $('body')
     body.append(box)
+    body.append(button)
     const title = document.createElement('header')
     title.className = 'header'
     const text = document.createTextNode('Rising Sun and Moon (Click me!)')
