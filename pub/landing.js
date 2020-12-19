@@ -26,9 +26,16 @@ button.textContent = 'Examples'
 $(document).on('click', '#examples', function () {
   window.location = "./examples.html";
 })
+const button2 =document.createElement('button')
+button.id = 'api'
+button.textContent = 'API'
+$(document).on('click', '#api', function () {
+  window.location = "./api.html";
+})
 const examplesWrapper = document.createElement('div')
 examplesWrapper.id = "examples_wrapper"
 examplesWrapper.append(button)
+examplesWrapper.append(button2)
 $('body').append(row1)
 $('body').append(examplesWrapper)
 $('body').append(row2)
