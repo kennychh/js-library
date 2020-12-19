@@ -11,6 +11,10 @@
   text-align: center;
   position: relative
 }
+
+.title {
+  text-align: center;
+}
 .sbox {
   display: block;
   overflow: hidden;
