@@ -36,6 +36,10 @@ const examplesWrapper = document.createElement('div')
 examplesWrapper.id = "examples_wrapper"
 examplesWrapper.append(button)
 examplesWrapper.append(button2)
+const title = document.createElement('h1')
+title.textContent = 'Weather'
+title.style.color = 'white'
 $('body').append(row1)
+$('body').append(title)
 $('body').append(examplesWrapper)
 $('body').append(row2)
