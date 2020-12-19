@@ -9,12 +9,12 @@ Getting Started
 
 Include the library and the css file in the head of your html file.
 
-![css](./images/scripts.png)
+![css](https://github.com/csc309-fall-2020/js-library-chanke66/blob/master/pub/images/scripts.png)
 
 In your javascript file, include the following Weather objects to access
 their functions.
 
-![js](./images/js.png)
+![js](https://github.com/csc309-fall-2020/js-library-chanke66/blob/master/pub/images/js.png)
 
 Rain()
 ------
@@ -26,7 +26,7 @@ the intensity of the rain.
 
 ### Parameters and Prototype
 
-![rain](./images/rain.png) \
+![rain](https://github.com/csc309-fall-2020/js-library-chanke66/blob/master/pub/images/rain.png) \
  The function includes this.raindrops = [], which saves raindrop
 elements. makeItRain is a function that creates the rain element.
 intensity is a helper function that changes the intensity of the rain.
@@ -46,7 +46,7 @@ manipulate the clouds in the sky, as well as whether it is day or night.
 
 ### Parameters and Prototype
 
-![sun](./images/sun.png) \
+![sun](https://github.com/csc309-fall-2020/js-library-chanke66/blob/master/pub/images/sun.png) \
  The function includes this.suns = [] which is an array that saves sun
 and moon elements. makeSunMoon(isItCloudy =true, haveButtons = true) is
 a function which creates the clickable sun and moon element.
@@ -68,7 +68,7 @@ the speed of the snow.
 
 ### Parameters and Prototype
 
-![snow](./images/snow.png) \
+![snow](https://github.com/csc309-fall-2020/js-library-chanke66/blob/master/pub/images/snow.png) \
  this.snowflakes = [] is an array that holds the snowflake elements
 this.duration =[] is an array of falling durations of each snowflake
 that is used to manipulate the snow speed. snow: function (intensity =
